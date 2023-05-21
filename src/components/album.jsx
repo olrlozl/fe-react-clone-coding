@@ -9,48 +9,31 @@ const Wrapper = styled.div`
 `;
 
 const Container = styled.div`
-  max-width: 1140px;
-  width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
-  box-sizing: border-box;
-`;
-
-const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -15px;
-  box-sizing: border-box;
-`;
-
-const Col = styled.div`
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 33.333333%;
-  max-width: 33.333333%;
-  position: relative;
-  width: 100%;
+  margin: 0 auto;
   padding: 0 15px;
-  box-sizing: border-box;
 `;
 
 const Album = (props) => {
   return (
     <Wrapper>
       <Container>
-        <Row>
-          <Col>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-          </Col>
-        </Row>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
       </Container>
     </Wrapper>
   );

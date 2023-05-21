@@ -2,13 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  margin-bottom: 1.5rem;
+  margin: 10px;
+  width: 350px;
   box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
-  position: relative;
-  display: flex;
   flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0,0,0,.125);
@@ -58,21 +55,17 @@ const Button_group = styled.div`
 `;
 
 const Button = styled.button`
-  border-radius: 0.2rem;
-  flex: 1 1 auto;
-  cursor: pointer;
-  padding: 0.25rem 0.5rem;
+  border-radius: ${(props) => props.borderRadius};
+  background-color: transparent;
   font-size: .875rem;
   line-height: 1.5;
-  border-radius: 0.2rem;
+  padding: 0.25rem 0.5rem;
   color: #6c757d;
   border-color: #6c757d;
-  display: inline-block;
+  outline: none;
   font-weight: 400;
   text-align: center;
-  vertical-align: middle;
-  user-select: none;
-  background-color: transparent;
+  cursor: pointer;
 `;
 
 const Time = styled.small`
@@ -91,8 +84,8 @@ const Card = (props) => {
           </Card__text>
           <Card__bottom>
             <Button_group>
-              <Button>View</Button>
-              <Button>Edit</Button>
+              <Button borderRadius="4px 0 0 4px">View</Button>
+              <Button borderRadius="0 4px 4px 0">Edit</Button>
             </Button_group>
             <Time>9 mins</Time>
           </Card__bottom>
